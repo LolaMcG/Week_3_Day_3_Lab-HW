@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1>My Instrument Shop Order List</h1>
+    <ul>
+    {% for order in orders %}
+        <li>
+            <p><a href="orders/{{loop.index0}}">{{order.customer_name}} - {{order.order_date}} - {{order.quantity}} - {{order.instrument_name}} - {{order.category}}</a></p>
+        </li>
+    {% endfor %}
+    </ul>
+    
+
+</body>
+</html>
